@@ -11,6 +11,7 @@
                 </div>
                 <div class="card-body p-5">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <!-- Módulo para Proveedores -->
                         <div class="col">
                             <div class="card-module h-100 shadow-sm border-0 bg-gradient-proveedores">
                                 <div class="card-module-icon">
@@ -25,6 +26,22 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Módulo para Reportes -->
+                        <div class="col">
+                            <div class="card-module h-100 shadow-sm border-0 bg-gradient-primary">
+                                <div class="card-module-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="card-module-content">
+                                    <h3 class="card-module-title">Reportes</h3>
+                                    <p class="card-module-description">Generar Reportes de Proveedores</p>
+                                    <a href="@Url.Action("ProveedoresPorUbicacion", "Reportes")" class="btn btn-outline-light">
+                                        Ver Reporte
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Otros módulos (como Productos, Ubicaciones) -->
                         <div class="col">
                             <div class="card-module h-100 shadow-sm border-0 bg-gradient-productos">
                                 <div class="card-module-icon">
@@ -60,14 +77,13 @@
     </div>
 </div>
 
+<!-- Estilo del Dashboard -->
 <style>
-    /* Fondo blanco */
     .dashboard-container {
         min-height: 100vh;
         background-color: #ffffff;
     }
 
-    /* Gradientes para módulos */
     .bg-gradient-primary {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
@@ -84,7 +100,6 @@
         background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
     }
 
-    /* Estilo de módulos */
     .card-module {
         display: flex;
         flex-direction: column;
@@ -96,10 +111,10 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card-module:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
+        .card-module:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
 
     .card-module-icon {
         font-size: 4rem;
@@ -131,15 +146,10 @@
         transition: all 0.3s ease;
     }
 
-    .btn-outline-light:hover {
-        background-color: white;
-        color: black;
-    }
-
-    /* Sombra sutil para la tarjeta principal */
-    .main-card {
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
+        .btn-outline-light:hover {
+            background-color: white;
+            color: black;
+        }
 </style>
 
 <!-- Incluye Font Awesome para los íconos -->

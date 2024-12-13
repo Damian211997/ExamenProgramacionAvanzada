@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Reporte de Proveedores por Ubicación";
+}
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Ubicación</th>
+                <th>Número de Proveedores</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Ubicacion</td>
+                    <td>@item.NumeroProveedores</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
