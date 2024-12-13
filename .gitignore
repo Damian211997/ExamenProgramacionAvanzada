@@ -3,3 +3,12 @@
 ################################################################################
 
 /ExamenProgramacionAvanzada.sln
+# Archivos y carpetas de Visual Studio
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+Thumbs.db
+*.[Cc]ache
