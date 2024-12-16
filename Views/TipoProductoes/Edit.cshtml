@@ -1,44 +1,104 @@
 ﻿@model ExamenProgramacionAvanzada.Models.TipoProducto
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Tipo de Producto";
 }
 
-<h1>Edit</h1>
+<div class="container-fluid py-5 bg-light">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-gradient-warning text-white text-center py-4">
+                    <h1 class="display-4 mb-0">Editar Tipo de Producto</h1>
+                </div>
+                <div class="card-body p-5">
+                    <h4 class="text-center">Actualiza la información del producto</h4>
+                    <hr />
 
-<h4>TipoProducto</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="form-group">
+                            <label asp-for="Nombre" class="control-label"></label>
+                            <input asp-for="Nombre" class="form-control" placeholder="Ingrese el nombre del producto" />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Descripcion" class="control-label"></label>
+                            <textarea asp-for="Descripcion" class="form-control" rows="4" placeholder="Ingrese una descripción del producto"></textarea>
+                            <span asp-validation-for="Descripcion" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Estado" class="control-label"></label>
+                            <input asp-for="Estado" class="form-control" placeholder="Ingrese el estado del producto" />
+                            <span asp-validation-for="Estado" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group text-center mt-4">
+                            <input type="submit" value="Guardar" class="btn btn-success btn-block" />
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <a asp-action="Index" class="btn btn-outline-secondary btn-block">Volver al listado</a>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Descripcion" class="control-label"></label>
-                <input asp-for="Descripcion" class="form-control" />
-                <span asp-validation-for="Descripcion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-control" />
-                <span asp-validation-for="Estado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+
+<style>
+    .bg-gradient-warning {
+        background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+    }
+
+    .card {
+        border-radius: 15px;
+    }
+
+    .card-header {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .btn-success {
+        border-radius: 25px;
+        padding: 10px 20px;
+    }
+
+    .btn-outline-secondary {
+        border-radius: 25px;
+        padding: 10px 20px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-warning {
+        color: #ffc107;
+    }
+
+    .form-control:focus {
+        border-color: #ffc107;
+        box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+    }
+</style>

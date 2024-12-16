@@ -1,36 +1,87 @@
 ﻿@model ExamenProgramacionAvanzada.Models.TipoProducto
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles del Tipo de Producto";
 }
 
-<h1>Details</h1>
+<div class="container-fluid py-5 bg-light">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-gradient-info text-white text-center py-4">
+                    <h1 class="display-4 mb-0">Detalles del Tipo de Producto</h1>
+                </div>
+                <div class="card-body p-5">
+                    <h3>Información del Producto</h3>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Descripcion)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Descripcion)
+                        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.Estado)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Estado)
+                        </dd>
+                    </dl>
 
-<div>
-    <h4>TipoProducto</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-    </dl>
+                    <div class="text-center mt-4">
+                        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning btn-block">Editar</a>
+                        <a asp-action="Index" class="btn btn-outline-secondary btn-block mt-3">Volver al listado</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+<style>
+    .bg-gradient-info {
+        background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    }
+
+    .card {
+        border-radius: 15px;
+    }
+
+    .card-header {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .btn-warning {
+        border-radius: 25px;
+        padding: 10px 20px;
+    }
+
+    .btn-outline-secondary {
+        border-radius: 25px;
+        padding: 10px 20px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-info {
+        color: #17a2b8;
+    }
+</style>

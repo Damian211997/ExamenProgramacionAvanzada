@@ -1,24 +1,71 @@
 ﻿@model ExamenProgramacionAvanzada.Models.Ubicacion
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles de Ubicación";
 }
 
-<h1>Details</h1>
+<div class="container-fluid dashboard-container py-5 bg-white">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card main-card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-gradient-primary text-white text-center py-4">
+                    <h1 class="display-4 mb-0">Detalles de Ubicación</h1>
+                </div>
+                <div class="card-body p-5">
+                    <div>
+                        <h4>Ubicación</h4>
+                        <hr />
+                        <dl class="row">
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Nombre)
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning btn-sm">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
+                    <a asp-action="Index" class="btn btn-outline-secondary btn-sm ms-2">
+                        Volver a la lista
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div>
-    <h4>Ubicacion</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<!-- Estilos adicionales -->
+<style>
+    .dashboard-container {
+        min-height: 100vh;
+        background-color: #ffffff;
+    }
+
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .btn-group .btn {
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .btn-group .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+</style>
+
+<!-- Incluye Font Awesome para los íconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">

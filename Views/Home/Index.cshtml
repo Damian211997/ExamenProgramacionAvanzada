@@ -1,72 +1,73 @@
-﻿@{
-    ViewData["Title"] = "Dashboard";
-}
+﻿    @{
+        ViewData["Title"] = "Dashboard";
+    }
 
-<div class="container-fluid dashboard-container py-5 bg-white">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card main-card shadow-lg border-0 rounded-lg">
-                <div class="card-header bg-gradient-primary text-white text-center py-4">
-                    <h1 class="display-4 mb-0">Panel de Control</h1>
-                </div>
-                <div class="card-body p-5">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <!-- Módulo para Proveedores -->
-                        <div class="col">
-                            <div class="card-module h-100 shadow-sm border-0 bg-gradient-proveedores">
-                                <div class="card-module-icon">
-                                    <i class="fas fa-truck"></i>
-                                </div>
-                                <div class="card-module-content">
-                                    <h3 class="card-module-title">Proveedores</h3>
-                                    <p class="card-module-description">Gestiona tus proveedores</p>
-                                    <a href="@Url.Action("Index", "Proveedors")" class="btn btn-outline-light">
-                                        Administrar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Módulo para Reportes -->
-                        <div class="col">
-                            <div class="card-module h-100 shadow-sm border-0 bg-gradient-primary">
-                                <div class="card-module-icon">
-                                    <i class="fas fa-chart-bar"></i>
-                                </div>
-                                <div class="card-module-content">
-                                    <h3 class="card-module-title">Reportes</h3>
-                                    <p class="card-module-description">Generar Reportes de Proveedores</p>
-                                    <a href="@Url.Action("ProveedoresPorUbicacion", "Reportes")" class="btn btn-outline-light">
-                                        Ver Reporte
-                                    </a>
+    <div class="container-fluid dashboard-container py-5 bg-white">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card main-card shadow-lg border-0 rounded-lg">
+                    <div class="card-header bg-gradient-primary text-white text-center py-4">
+                        <h1 class="display-4 mb-0">Panel de Control</h1>
+                    </div>
+                    <div class="card-body p-5">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <!-- Módulo para Proveedores -->
+                            <div class="col">
+                                <div class="card-module h-100 shadow-sm border-0 bg-gradient-proveedores">
+                                    <div class="card-module-icon">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <div class="card-module-content">
+                                        <h3 class="card-module-title">Proveedores</h3>
+                                        <p class="card-module-description">Gestiona tus proveedores</p>
+                                        <a href="@Url.Action("Index", "Proveedors")" class="btn btn-outline-light">
+                                            Administrar
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Otros módulos (como Productos, Ubicaciones) -->
-                        <div class="col">
-                            <div class="card-module h-100 shadow-sm border-0 bg-gradient-productos">
-                                <div class="card-module-icon">
-                                    <i class="fas fa-box-open"></i>
-                                </div>
-                                <div class="card-module-content">
-                                    <h3 class="card-module-title">Tipos de Productos</h3>
-                                    <p class="card-module-description">Explora categorías de productos</p>
-                                    <a href="@Url.Action("Index", "TipoProductoes")" class="btn btn-outline-light">
-                                        Explorar
-                                    </a>
+                            <!-- Módulo para Reportes -->
+                            <div class="col">
+                                <div class="card-module h-100 shadow-sm border-0 bg-gradient-primary">
+                                    <div class="card-module-icon">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <div class="card-module-content">
+                                        <h3 class="card-module-title">Reportes</h3>
+                                        <p class="card-module-description">Generar Reportes de Proveedores</p>
+                                        <a href="@Url.Action("ProveedoresPorUbicacion", "Reportes")" class="btn btn-outline-light">
+                                            Ver Reporte
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-module h-100 shadow-sm border-0 bg-gradient-ubicaciones">
-                                <div class="card-module-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
+                            <!-- Otros módulos (como Productos, Ubicaciones) -->
+                            <div class="col">
+                                <div class="card-module h-100 shadow-sm border-0 bg-gradient-productos">
+                                    <div class="card-module-icon">
+                                        <i class="fas fa-box-open"></i>
+                                    </div>
+                                    <div class="card-module-content">
+                                        <h3 class="card-module-title">Tipos de Productos</h3>
+                                        <p class="card-module-description">Explora categorías de productos</p>
+                                        <a href="@Url.Action("Index", "TipoProductoes")" class="btn btn-outline-light">
+                                            Explorar
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="card-module-content">
-                                    <h3 class="card-module-title">Ubicaciones</h3>
-                                    <p class="card-module-description">Administra tus ubicaciones</p>
-                                    <a href="@Url.Action("Index", "Ubicacions")" class="btn btn-outline-light">
-                                        Gestionar
-                                    </a>
+                            </div>
+                            <div class="col">
+                                <div class="card-module h-100 shadow-sm border-0 bg-gradient-ubicaciones">
+                                    <div class="card-module-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="card-module-content">
+                                        <h3 class="card-module-title">Ubicaciones</h3>
+                                        <p class="card-module-description">Administra tus ubicaciones</p>
+                                        <a href="@Url.Action("Index", "Ubicacions")" class="btn btn-outline-light">
+                                            Gestionar
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -75,82 +76,81 @@
             </div>
         </div>
     </div>
-</div>
 
-<!-- Estilo del Dashboard -->
-<style>
-    .dashboard-container {
-        min-height: 100vh;
-        background-color: #ffffff;
-    }
-
-    .bg-gradient-primary {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-
-    .bg-gradient-proveedores {
-        background: linear-gradient(135deg, #fad0c4 0%, #ff9a9e 100%);
-    }
-
-    .bg-gradient-productos {
-        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-    }
-
-    .bg-gradient-ubicaciones {
-        background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-    }
-
-    .card-module {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 30px;
-        border-radius: 15px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-        .card-module:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    <!-- Estilo del Dashboard -->
+    <style>
+        .dashboard-container {
+            min-height: 100vh;
+            background-color: #ffffff;
         }
 
-    .card-module-icon {
-        font-size: 4rem;
-        color: white;
-        margin-bottom: 20px;
-        opacity: 0.8;
-    }
-
-    .card-module-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-module-title {
-        color: white;
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
-
-    .card-module-description {
-        color: rgba(255,255,255,0.8);
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .btn-outline-light {
-        border-width: 2px;
-        transition: all 0.3s ease;
-    }
-
-        .btn-outline-light:hover {
-            background-color: white;
-            color: black;
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-</style>
 
-<!-- Incluye Font Awesome para los íconos -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        .bg-gradient-proveedores {
+            background: linear-gradient(135deg, #fad0c4 0%, #ff9a9e 100%);
+        }
+
+        .bg-gradient-productos {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+
+        .bg-gradient-ubicaciones {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+        }
+
+        .card-module {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .card-module:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            }
+
+        .card-module-icon {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .card-module-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-module-title {
+            color: white;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .card-module-description {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .btn-outline-light {
+            border-width: 2px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-light:hover {
+                background-color: white;
+                color: black;
+            }
+    </style>
+
+    <!-- Incluye Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">

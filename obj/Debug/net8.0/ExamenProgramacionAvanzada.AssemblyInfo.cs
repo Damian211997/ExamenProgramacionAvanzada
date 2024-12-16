@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExamenProgramacionAvanzada")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5b057a232bcd99bdadd52a231c8ab14b69076ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4aa8cc2959465c976854f2b75508ab4702df439c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExamenProgramacionAvanzada")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExamenProgramacionAvanzada")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
